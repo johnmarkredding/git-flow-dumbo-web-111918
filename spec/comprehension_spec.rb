@@ -21,7 +21,7 @@ describe "GIT" do
 
   it "4. What command allows you to add all previously all tracked, modified files
       and create a message, 'add img to index' for the commit in one command?" do
-    answer = "git commit -a -m "add img to index""
+    answer = "git commit -am 'add img to index'"
     encoded_answer = "00565151beeb1fa3682d6386399eaf87b788a5bc"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -45,7 +45,7 @@ describe "GIT" do
 
   it "7. From the master branch, what is the syntax for pushing the master branch to the 
       # remote master branch where the remote is called 'upstream'?" do
-    answer = "?"
+    answer = "git push upstream master"
     encoded_answer = "46e78005226efc7d1be2b4f9f26bcbdba2bf286d"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -53,7 +53,7 @@ describe "GIT" do
   it "8. From the feature branch 'add-image', what is the syntax for creating a remote
       add-image branch with all of the local branch's content? 
       (remote is still called 'upstream')" do
-    answer = "?"
+    answer = "git push upstream add-image"
     encoded_answer = "b0ce3fc84df6855995340cf16bce42f90ac9f9ab"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -61,7 +61,7 @@ describe "GIT" do
 
 # describe "FETCHING:" do
   it "9. What command do you run to update all branches from all remotes?" do
-    answer = "?"
+    answer = "git fetch --all"
     encoded_answer = "01e5711a6878a7ed0e4c0078870b772d0a58f510"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -69,14 +69,14 @@ describe "GIT" do
   it "10. Locally you have a master branch, remotely there is a master & add-nav-bar branch.
       You run 'git fetch --all'. 
       What command would you need to run to view and change 'add-nav-bar' branch locally?" do
-    answer = "?"
+    answer = "git checkout add-nav-bar"
     encoded_answer = "a510904cdd46be19a468be297076084d2ec5a5cf"
     expect(encode(answer)).to eq(encoded_answer)
   end
 
   it "11. What command do you run to update the local master branch with the 
       master branch on the remote 'upstream'?" do
-    answer = "?"
+    answer = "git fetch upstream master"
     encoded_answer = "10ce0782f27a2e126f7fe0f12dd189cc16578e26"
     expect(encode(answer)).to eq(encoded_answer)
   end
@@ -86,7 +86,7 @@ describe "GIT" do
 
   it "12. Is 'git pull' the same as running 'git fetch' followed by 'git merge'?" do
     # "true" or "false" in a string
-    answer = "?" 
+    answer = "true" 
     
     encoded_answer = "5ffe533b830f08a0326348a9160afafc8ada44db"
     expect(encode(answer)).to eq(encoded_answer)
@@ -94,7 +94,7 @@ describe "GIT" do
 
   it "13. From the add-img branch, what command do you run to fetch and merge all the 
       changes from the add-img branch on the remote 'origin'?" do
-    answer = "?"
+    answer = "git fetch origin"
     encoded_answer = "96887ba3f8740e85c07e4ee6bebba55ad8c779d0"
     expect(encode(answer)).to eq(encoded_answer)
   end
